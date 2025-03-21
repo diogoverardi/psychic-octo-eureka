@@ -1,5 +1,12 @@
 import {updateTodo} from '../services/todoService.js';
 
+/**
+* Updates an existing item in the database.
+* @param {string} id - ID of the item to be updated.
+* @param {string} name.
+* @param {boolean|undefined} isComplete - False will be set when undefined.
+* @returns The updated todo item, or null if not found.
+*/
 export const editTodo = async (req, res, next) => {
   try {
     const {id} = req.params;

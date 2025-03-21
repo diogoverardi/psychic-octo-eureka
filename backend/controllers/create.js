@@ -1,5 +1,11 @@
 import {createTodo} from '../services/todoService.js';
 
+/**
+* Creates a new item and saves it to the database.
+* @param {string} id - UUID provided by the frontend in the request.
+* @param {string} name
+* @returns The created item.
+*/
 export const addTodo = async (req, res, next) => {
   try {
     if (
